@@ -1,57 +1,116 @@
-.calc {
 
-	background-color: #000;
-	color: #fff;
-	padding: 30px 20px;
-	width: 250px;
-	margin: 0 auto;
+* {
+    
+    font-family: monospace;
 }
 
-.calc-display {
+body {
+    
+    background-color:#111;
+}
 
-	border: 1px solid #fff;
-	border-radius: 10px;
-	margin: 10px 0;
-	height: 50px;
+/*calculator*/
 
-	display: flex;
-	align-items: center;
+
+.calculator {
+    
+    margin: 0 auto;
+    width: 250px;
+    height: 350px;
+    border-radius: 20px;
+    
+    padding:30px 20px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    background-color: #555;
+    box-shadow: 10px 10px 1px #444;
+}
+
+.buttons, .display {
+    width:100%;
+}
+
+/* display */
+
+.display {
+    
+    height: 60px;
+    border-radius:10px;
+    background: linear-gradient(90deg, #0005, #5555, #aaa5);
+    display:flex;
+    align-items: center;
+    margin-bottom:20px;
+    box-shadow: 1px 1px 1px #aaa5;
+}
+
+#display {
+    color: #ddd;
+    margin: 0 20px;
+    text-shadow: 1px 1px 1px #000;
+    font-size: 20px;
+    margin: 0 20px;
+}
+
+/*buttons*/
+
+.buttons {
+    
+    flex:1;
+    height:200px;
+    display:grid;
+    gap:5px;
+    
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
 
 }
 
-.calc-display span {
-
-	font-size: 20px;
-	margin: 0 10px;
+.buttons button {
+    
+    border:none;
+    border-radius:10px;
+    box-shadow: 1px 1px 1px #aaa5;
+    color: #fff;
+    font-weight:bold;
 }
 
-.calc-btns {
-
-	height: 200px;
-	display: flex;
-	flex-direction: column;
+.buttons button:hover{
+    
+    transition: .5s ease-in-out;
+    transform:scale(105%);
+    
 }
 
-.btns-row:nth-child(5) {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr) 2fr;
+.equal {
+    
+    grid-column-start: 3;
+    grid-column-end: 5;
 }
 
-.btns-row {
-	flex: 1;
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
+.number {
+    
+    background-color: #333;
 }
 
-.btn {
-	background-color: #0006;
-	color: white;
-	border: 1px outset white;
-	font-size: 18px;
+.operator {
+    background-color: #222;
+    
 }
 
-.btn:hover {
-	background-color: #fff;
-	color: #000;
-	transform: scale(98%);
+.on {
+    
+    background-color: #0a7;
+}
+
+.off {
+    
+    background-color: #f05;
+}
+
+.ce {
+    
+    background-color: #f50;
 }
